@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote na Gente</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Resetando margens e preenchimentos */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fundo de galáxia */
+    body {
+      background-image: url('galaxy-background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #e0e0e0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      padding-top: 20px;
+      background-attachment: fixed;
+      /* Para efeito de parallax */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Animação de fade-in para a página */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Animação de borda */
+    @keyframes borderAnimation {
+      0% {
+        border-color: transparent;
+      }
+
+      100% {
+        border-color: #bb00ff;
+      }
+    }
+
+    /* Container principal */
+    .main-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 5px solid transparent;
+      padding: 40px;
+      border-radius: 15px;
+      animation: fadeIn 1.5s ease-in-out, borderAnimation 2s ease-in-out forwards;
+      box-shadow: 0 0 15px rgba(187, 0, 255, 0.7);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .main-container img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .main-container h1 {
+      font-size: 2.5rem;
+      color: #bb00ff;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .btn {
+      background-color: #bb00ff;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #6600cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ccc;
+      font-size: 0.9rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Container Principal -->
+  <div class="main-container">
+    <h1>Vote na Kurzy!</h1>
+    <img src="frame (1).png" alt="Imagem de votação" class="image">
+    <p>A sua opinião é muito importante para nós! Clique abaixo e ajude-nos a crescer.</p>
+    <a href="index.html" class="btn">Volte a Pagina Inicial</a>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Kurzy - Todos os direitos reservados</p>
+  </footer>
+</body>
+
+</html>

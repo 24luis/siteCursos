@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Inglês - Kurzy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <style>
+    /* Resetando margens e preenchimentos */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fundo de galáxia */
+    body {
+      background-image: url('galaxy-background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #e0e0e0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      padding-top: 20px;
+      background-attachment: fixed;
+      /* Para dar efeito de parallax */
+    }
+
+    /* Barra de navegação */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 3px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    /* Links da barra de navegação */
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #bb00ff;
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    /* Seção de Vídeo e Descrição Lado a Lado */
+    .course-video-description {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 20px;
+      gap: 30px;
+      flex-wrap: wrap;
+      /* Para responsividade */
+      margin-top: 80px;
+    }
+
+    .video-container {
+      flex: 1;
+      max-width: 48%;
+      /* Controlando a largura */
+      text-align: center;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 315px;
+      border: 4px solid #bb00ff;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(187, 0, 255, 0.7);
+    }
+
+    .description-container {
+      flex: 1;
+      max-width: 48%;
+      /* Controlando a largura */
+      color: #e0e0e0;
+    }
+
+    .description-container h2 {
+      font-size: 2rem;
+      color: #bb00ff;
+      margin-bottom: 15px;
+    }
+
+    .description-container p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .description-container h3 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #bb00ff;
+    }
+
+    .description-container ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    .description-container li {
+      margin-bottom: 10px;
+    }
+
+    /* Botão de Compra */
+    .btn {
+      background-color: #bb00ff;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #6600cc;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    /* Estilo para a seção de vídeo e descrição no layout mobile */
+    @media (max-width: 768px) {
+      .course-video-description {
+        flex-direction: column;
+        /* Organiza os itens em uma coluna */
+        gap: 20px;
+      }
+
+      .video-container,
+      .description-container {
+        max-width: 100%;
+        /* Ajuste para a largura total em telas pequenas */
+      }
+
+      .video-container iframe {
+        height: 220px;
+        /* Reduz o tamanho do vídeo em telas pequenas */
+      }
+    }
+  </style>
+
+
+  <!-- Barra de navegação -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Kurzy Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#course-description">Descrição</a></li>
+      <li><a href="#video-section">Vídeo</a></li>
+      <li><a href="#buy-section">Comprar</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção de Vídeo e Descrição Lado a Lado -->
+  <section class="course-video-description">
+    <!-- Lado esquerdo (Vídeo) -->
+    <div class="video-container">
+      <h2>Assista a uma prévia sobre o curso</h2>
+      <video style="border: 5px solid #3a0c2a; border-radius: 20px;" width="600" height="410" src="/202411182135.mp4"
+        controls></video>
+      <h2>Curso De Inglês Básico</h2>
+    </div>
+
+    <!-- Lado direito (Descrição + Botão de Compra) -->
+    <div class="description-container">
+      <h2>Descrição do Curso</h2>
+      <p>Este curso de inglês é perfeito para quem quer aprender a língua de forma prática e eficiente. Você vai
+        aprender
+        desde a gramática básica até conversação, vocabulário, e expressões do dia a dia.</p>
+
+      <h3>Conteúdo Programático</h3>
+      <ul>
+        <li>Introdução ao Inglês e Alfabeto</li>
+        <li>Construção de Frases e Gramática</li>
+        <li>Vocabulário e Expressões Comuns</li>
+        <li>Conversação para Iniciantes</li>
+        <li>Prática de Leitura e Audição</li>
+      </ul>
+
+      <h3>Pré-requisitos</h3>
+      <p>Não é necessário ter experiência prévia. Ideal para iniciantes ou para quem deseja reforçar seu conhecimento.
+      </p>
+
+      <h3>Instrutor</h3>
+      <p>Professora Thiago Soares - Professor de Inglês com 3 anos de experiência no ensino de idiomas.</p>
+
+      <a href="compra.html" class="btn">Comprar Agora</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Kurzy - Todos os direitos reservados</p>
+  </footer>
+</body>
+
+</html>

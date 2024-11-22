@@ -1,0 +1,179 @@
+/* Resetando margens e preenchimentos */
+* {
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+/* Fundo de galáxia */
+body {
+  background-image: url('galaxy-background.jpg');
+  /* Imagem de fundo de galáxia */
+  background-size: cover;
+  background-position: center;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  padding-top: 20px;
+  background-attachment: fixed;
+  /* Para dar efeito de parallax */
+}
+
+/* Barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fundo semi-transparente */
+  padding: 3px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Efeito de hover para escurecer */
+}
+
+/* Logo da barra de navegação */
+.navbar .logo img {
+  width: 100px;
+  height: auto;
+  margin-left: 20px;
+}
+
+/* Links da barra de navegação */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #bb00ff;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  /* Cor do texto ao passar o mouse */
+}
+
+/* Efeito futurista para links */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #bb00ff;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Seção de cursos */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* Responsivo */
+  gap: 30px;
+  padding: 30px;
+  margin-top: 80px;
+  /* Para evitar sobreposição com a barra de navegação */
+}
+
+/* Cartões de cursos */
+.course-card {
+  background-color: rgba(26, 26, 26, 0.7);
+  /* Fundo escuro transparente */
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Estilo para imagem do curso */
+.course-image {
+  height: 180px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  /* Borda transparente */
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilo para os títulos dos cursos */
+.course-card h2 {
+  color: #bb00ff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo para os textos de descrição */
+.course-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Botão de saber mais */
+.btn {
+  background-color: #bb00ff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6600cc;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  font-size: 0.9rem;
+}

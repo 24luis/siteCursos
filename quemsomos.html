@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos - Kurzy</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('galaxy-background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #e0e0e0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      padding-top: 20px;
+      background-attachment: fixed;
+      animation: backgroundAnimation 10s ease-in-out infinite;
+    }
+
+    @keyframes backgroundAnimation {
+      0% {
+        background-image: url('galaxy-background.jpg');
+      }
+
+      50% {
+        background-image: url('galaxy-background.jpg');
+      }
+
+      100% {
+        background-image: url('galaxy-background.jpg');
+      }
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+      transition: background-color 0.3s ease;
+      opacity: 0;
+      animation: navbarFadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes navbarFadeIn {
+      0% {
+        opacity: 0;
+        top: -50px;
+      }
+
+      100% {
+        opacity: 1;
+        top: 0;
+      }
+    }
+
+    .navbar:hover {
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #8a2be2;
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .about-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px 20px;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 100px;
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .text-container {
+      flex: 1;
+      max-width: 48%;
+      text-align: left;
+      color: #e0e0e0;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .text-container h2 {
+      font-size: 2.5rem;
+      color: #8a2be2;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(138, 43, 226, 0.6);
+    }
+
+    .text-container p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .text-container ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    .text-container li {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .team-container {
+      flex: 1;
+      max-width: 48%;
+      text-align: center;
+      animation: fadeInRight 1s ease-out;
+    }
+
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .team-container img {
+      width: 400px;
+      max-height: 300px;
+      border-radius: 15px;
+      border: 3px solid #8a2be2;
+      box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+    }
+
+    .team-container h3 {
+      font-size: 1.8rem;
+      color: #8a2be2;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .btn-contact {
+      background-color: #8a2be2;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .btn-contact:hover {
+      background-color: #6600cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .text-container,
+      .team-container {
+        max-width: 100%;
+      }
+
+      .team-container img {
+        max-height: 200px;
+      }
+    }
+  </style>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src=" logo.png" alt="Kurzy Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#course-description">Descrição</a></li>
+      <li><a href="#video-section">Vídeo</a></li>
+      <li><a href="#buy-section">Comprar</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <div class="text-container">
+      <h2>Quem Somos</h2>
+      <p>Somos a Kurzy, uma plataforma de aprendizado online dedicada a oferecer cursos de alta qualidade para pessoas
+        de todos os níveis. Nosso objetivo é transformar o aprendizado em uma experiência futurista, divertida e eficaz.
+        Nossa missão é ajudar você a adquirir novas habilidades e alcançar seu potencial máximo, seja em tecnologia,
+        idiomas ou desenvolvimento pessoal.</p>
+
+
+
+      <a href="contato.html" class="btn-contact">Entre em Contato</a>
+    </div>
+
+    <div class="team-container">
+      <img style="height: 800px;" ;" src="logo.png" alt="Nossa Equipe">
+      <h3>Conheça Nossa Equipe</h3>
+      <h4 style="color: #6600cc;">Somos uma equipe apaixonada por educação e inovação, sempre buscando a excelência no
+        ensino.</p>
+      </h4>
+      <p><b>Luis Gustavo<b /> - CEO/Programador/Professor </p>
+      <p><b>Thiago Soares</b> - Professor/Supervisor/Diretor de Vendas</p>
+      <p><b>Sara Cristina</b> - Designer/Contadora</p>
+      <p><b>Lucas Vinicius</b> - Designer/Recrutador/Analista de Cibersegurança</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Kurzy - Todos os direitos reservados</p>
+  </footer>
+
+  </body>
+
+</html>

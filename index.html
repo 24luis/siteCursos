@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurzy - Cursos Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Kurzy Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Início</a></li>
+      <li><a href="quemsomos.html">Quem Somos</a></li>
+      <li><a href="vote.html">Vote</a></li>
+      <li><a href="index.html#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção de cursos -->
+  <section class="courses">
+    <div class="course-card">
+      <div class="course-image">
+        <img
+          src="png-transparent-professional-python-programmer-computer-programming-android-android-blue-logo-computer-program-thumbnail.png"
+          alt="Curso de Python">
+      </div>
+      <h2>Curso de Python</h2>
+      <p>Aprenda a programar em Python e desenvolva habilidades para automação, web e mais.</p>
+      <a href="curso-python.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="course-card">
+      <div class="course-image">
+        <img src="image (2).png" alt="Curso de Inglês">
+      </div>
+      <h2>Curso de Inglês</h2>
+      <p>Melhore seu inglês para viagens, negócios e cultura com nosso curso completo.</p>
+      <a href="curso-ingles.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="course-card">
+      <div class="course-image">
+        <img
+          src="png-clipart-javascript-scalable-graphics-logo-encapsulated-postscript-javascript-icon-text-logo-thumbnail.png"
+          alt="JavaScript">
+      </div>
+      <h2>Curso de JavaScript</h2>
+      <p>Aprenda a programar em JavaScript e desenvolva habilidades para automação, web e mais.</p>
+      <a href="curso-js.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="course-card">
+      <div class="course-image">
+        <img src="pngtree-music-note-staves-png-image_5998981.png" alt="Corte de Cabelo">
+      </div>
+      <h2>Curso De Música</h2>
+      <p>Domine instrumentos músicais e aprimore seu conhecimento sobre a música.</p>
+      <a href="curso-de-musica.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="course-card">
+      <div class="course-image">
+        <img src="b36d6ae4b3349b7780899f33e689ad26.jpg" alt="Geografia">
+      </div>
+      <h2>Curso de Geografia</h2>
+      <p>Compreenda as dinâmicas do nosso planeta e explore os aspectos físicos e humanos da Geografia..</p>
+      <a href="curso-geografia.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="course-card">
+      <div class="course-image">
+        <img src="Educacao-Financeira-como-construir-um-fundo-de-emergencia.png" alt="Fotografia">
+      </div>
+      <h2>Curso de Educação Financeira</h2>
+      <p>Desenvolva suas habilidades financeiras, do básico ao intermediário.</p>
+      <a href="curso-fotografia.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="course-card">
+      <div class="course-image">
+        <img src="em-breve-1.png" alt="Marketing Digital">
+      </div>
+      <h2>Em Breve</h2>
+      <p>Em Breve.</p>
+      <a href="curso-marketing-digital.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="course-card">
+      <div class="course-image">
+        <img src="em-breve-1.png" alt="Gestão de Projetos">
+      </div>
+      <h2>Em Breve</h2>
+      <p>Em Breve.</p>
+      <a href="curso-gestao-projetos.html" class="btn">Saiba mais</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Kurzy - Todos os direitos reservados</p>
+  </footer>
+  <script>
+    // Carrega o conteúdo do navbar.html
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(error => console.log('Erro ao carregar o navbar:', error));
+  </script>
+</body>
+
+</html>
